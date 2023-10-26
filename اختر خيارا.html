@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>صفحة اختيار الخيار</title>
+    <style>
+        #content h1 {
+            color: blue; /* تغيير لون العنوان إلى اللون الأزرق */
+            font-size: 24px; /* تغيير حجم العنوان إلى 24 بكسل */
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            var selectElement = document.getElementById("options");
+            var selectedOption = selectElement.value;
+
+            if (selectedOption === "option1") {
+                document.getElementById("content").innerHTML = `
+                    <h1 style="color: blue; font-size: 24px;">صفحة 1 - صفحة HTML مقصودة</h1>
+                    <p>هذه الصفحة تحتوي على المحتوى الذي تم الإشارة إليه.</p>
+                `;
+            } else if (selectedOption === "option2") {
+                // يمكنك أضافة المحتوى الخاص بالخيار 2 هنا
+            } else if (selectedOption === "option3") {
+                // وهكذا للخيارات الباقية
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>اختر خيارًا:</h1>
+    <select id="options">
+        <option value="option1">خيار 1</option>
+        <option value="option2">خيار 2</option>
+        <option value="option3">خيار 3</option>
+        <option value="option4">خيار 4</option>
+        <option value="option5">خيار 5</option>
+    </select>
+    <button onclick="redirectToPage()">انتقل</button>
+    <div id="content"></div>
+</body>
+</html>
